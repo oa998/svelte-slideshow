@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite'; // for tailwind
 
+/** @type {import('@sveltejs/kit').Config} */
 export default {
 	kit: {
 		adapter: adapter({
@@ -11,10 +12,14 @@ export default {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		})
-	},
-	paths: {
-		base: '/svelte-slideshow'
+		}),
+		alias: {
+			// this will match a file
+			'$components/*': 'src/components'
+		},
+		paths: {
+			base: '/svelte-slideshow'
+		}
 	},
 	preprocess: vitePreprocess()
 };

@@ -1,1 +1,1 @@
-<div class='text-3xl'>Trivia!</div>
+<div class="text-3xl">Trivia!</div>
