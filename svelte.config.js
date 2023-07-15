@@ -13,5 +13,8 @@ export default {
 			strict: true
 		})
 	},
+	paths: {
+		base: '/svelte-slideshow'
+	},
 	preprocess: vitePreprocess()
 };
