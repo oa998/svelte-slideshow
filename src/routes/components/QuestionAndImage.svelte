@@ -2,6 +2,7 @@
 	import Center from '../components/Center.svelte';
 	import TriviaHalfSlide from '../components/TriviaHalfSlide.svelte';
 	import Unveil from '../components/Unveil.svelte';
+	import ShadowText from './ShadowText.svelte';
 
 	let revealed = false;
 	let hint = false;
@@ -14,28 +15,18 @@
 
 <TriviaHalfSlide>
 	<Center class="rounded-xl flex flex-col gap-20" slot="left">
-		<div class="text-5xl px-10 question-shadow">{clue}</div>
+		<ShadowText class="text-5xl px-10 question-shadow scale-125">{clue}</ShadowText>
 		{#if revealed}
-			<div class="text-5xl px-10 answer-shadow text-yellow-200 font-mon">{answer}</div>
+			<ShadowText class="text-5xl px-10 answer-shadow text-yellow-200 font-mono"
+				>{answer}</ShadowText
+			>
 		{:else if hint}
-			<div class="text-5xl px-10 question-shadow font-mon">{blanks2}</div>
+			<ShadowText class="text-5xl px-10 question-shadow font-mono">{blanks2}</ShadowText>
 		{:else}
-			<div class="text-5xl px-10 question-shadow font-mon">{blanks1}</div>
+			<ShadowText class="text-5xl px-10 question-shadow font-mono">{blanks1}</ShadowText>
 		{/if}
 	</Center>
 	<Center class="rounded-xl overflow-hidden border border-white relative" slot="right">
 		<Unveil on:reveal={() => (revealed = true)} on:hint={() => (hint = true)} {img} />
 	</Center>
 </TriviaHalfSlide>
-
-<style>
-	.question-shadow {
-		text-shadow: #f33 0 0 5px, #f33 0 0 10px, #f33 0 0 20px, #f33 0 0 30px, #f33 0 0 40px,
-			#f33 0 0 60px, #f33 0 0 10px, #f33 0 0 10px;
-	}
-	.answer-shadow {
-		text-shadow: rgb(51, 51, 255) 0 0 5px, rgb(51, 51, 255) 0 0 10px, rgb(51, 51, 255) 0 0 20px,
-			rgb(51, 51, 255) 0 0 30px, rgb(51, 51, 255) 0 0 40px, rgb(51, 51, 255) 0 0 60px,
-			rgb(51, 51, 255) 0 0 10px, rgb(51, 51, 255) 0 0 10px;
-	}
-</style>

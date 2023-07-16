@@ -15,7 +15,6 @@
 
 	const setBlur = (blur: number, brightness: number) => {
 		if (browser) {
-			console.log({ blur, brightness });
 			document.documentElement.style.setProperty('--reveal-blur', `${blur}px`);
 			document.documentElement.style.setProperty(
 				'--reveal-brightness',
