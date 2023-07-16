@@ -74,8 +74,8 @@ const questions = [
   },
   {
     type: "QUESTION",
-    blanks1: 'W _ _ _ _ _ _ _ _',
-    blanks2: 'W _ _ _ R _ _ _ _',
+    blanks1: '_ _ T _ _ _ _ _ _',
+    blanks2: 'W _ T _ _ _ _ _ _',
     clue: '"In depth planning"',
     answer: 'W A T E R F A L L',
     img: 'https://www.wallpaperup.com/uploads/wallpapers/2015/05/09/682166/d5f82ee0fba5fb44dd97d2f8c832fe4e.jpg'
