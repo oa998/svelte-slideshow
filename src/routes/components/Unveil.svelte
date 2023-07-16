@@ -28,7 +28,7 @@
 		percentProgress = 1 - v / 100;
 		setBlur(startBlur * percentProgress, 1 - percentProgress + startBrightness);
 		if (percentProgress < 0) dispatch('reveal');
-		else if (percentProgress < 0.4) dispatch('hint');
+		else if (percentProgress < 0.5) dispatch('hint');
 	};
 
 	let reveal = () => {};
