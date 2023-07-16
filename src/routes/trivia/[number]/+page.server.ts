@@ -38,7 +38,7 @@ const questions = [
     blanks2: 'F _ _ _ W _ _ _',
     clue: '"Networking rules"',
     answer: 'F I R E W A L L',
-    img: 'https://images.techhive.com/images/article/2015/05/firewall_thinkstock-100583207-large.jpg'
+    img: 'https://sigmacybersecurity.com/wp-content/uploads/2020/11/Next-Generation-Firewall-1024x768.jpg'
   },
   {
     type: "QUESTION",
