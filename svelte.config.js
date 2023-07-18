@@ -4,7 +4,6 @@ import { vitePreprocess } from '@sveltejs/kit/vite'; // for tailwind
 /** @type {import('@sveltejs/kit').Config} */
 export default {
 	kit: {
-		
 		adapter: adapter({
 			// default options are shown. On some platforms
 			// these options are set automatically — see below
@@ -17,10 +16,10 @@ export default {
 		alias: {
 			// this will match a file
 			'$components/*': 'src/components'
-		},
-		paths: {
-			base: '/svelte-slideshow'
 		}
+		// paths: {
+		// 	base: '/svelte-slideshow'
+		// }
 	},
 	preprocess: vitePreprocess()
 };
