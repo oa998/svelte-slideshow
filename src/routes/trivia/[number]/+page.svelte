@@ -10,9 +10,11 @@
 	if (browser) {
 		document.addEventListener('keydown', (e) => {
 			if (e.key === 'ArrowRight') {
-				window.location.pathname = `/svelte-slideshow/trivia/${next}`;
+				// window.location.pathname = `/svelte-slideshow/trivia/${next}`;
+				window.location.pathname = `/trivia/${next}`;
 			} else if (e.key === 'ArrowLeft') {
-				window.location.pathname = `/svelte-slideshow/trivia/${previous}`;
+				// window.location.pathname = `/svelte-slideshow/trivia/${previous}`;
+				window.location.pathname = `/trivia/${previous}`;
 			}
 		});
 	}
