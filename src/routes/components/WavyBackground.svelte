@@ -1,4 +1,4 @@
-<div class="h-full w-full bg">
+<div class={`h-full w-full bg ${$$props.class}`}>
 	<slot />
 </div>
 
