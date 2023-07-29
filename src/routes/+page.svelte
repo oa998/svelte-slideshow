@@ -1,6 +1,11 @@
+<script>
+	import Login from './components/Login.svelte';
+</script>
+
 <div class="w-full h-full bg text-white p-4">
 	<!-- <a class="p-3 border border-white block w-min" href="/svelte-slideshow/trivia/0">Trivia</a> -->
 	<a class="p-3 border border-white block w-min" href="/trivia/0">Trivia</a>
+	<Login />
 </div>
 
 <style>
