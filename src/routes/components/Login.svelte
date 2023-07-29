@@ -5,7 +5,7 @@
 	<button
 		class="bg-red-400 w-full p-5"
 		on:click={() => {
-			fetch('/login', {
+			fetch('https://login.blah.wiki/login/login', {
 				method: 'POST',
 				headers: {
 					accept: 'application/json',
@@ -23,7 +23,7 @@
 		class="w-full bg-blue-400 p-5"
 		on:click={() => {
 			console.log('getit');
-			fetch('/', {
+			fetch('https://login.blah.wiki/', {
 				method: 'GET',
 				credentials: 'include'
 			})
