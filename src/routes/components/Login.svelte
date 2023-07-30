@@ -5,7 +5,7 @@
 	<button
 		class="bg-red-400 w-full p-5"
 		on:click={() => {
-			fetch('https://login.blah.wiki/login/login', {
+			fetch('https://nginx-anything-storage-glovbogi2a-uc.a.run.app/login', {
 				method: 'POST',
 				headers: {
 					accept: 'application/json',
@@ -13,7 +13,8 @@
 				},
 				body: JSON.stringify({
 					username: 'zzz@zzz.com',
-					password: 'abc123ABC'
+					password: 'abc123ABC',
+					loc: 'ui'
 				}),
 				credentials: 'include'
 			});
