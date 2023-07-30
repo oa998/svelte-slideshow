@@ -24,7 +24,7 @@
 		class="w-full bg-blue-400 p-5"
 		on:click={() => {
 			console.log('getit');
-			fetch('https://login.blah.wiki/', {
+			fetch('https://nginx-anything-storage-glovbogi2a-uc.a.run.app', {
 				method: 'GET',
 				credentials: 'include'
 			})
