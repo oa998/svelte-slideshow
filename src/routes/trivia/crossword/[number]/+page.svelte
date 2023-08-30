@@ -1,20 +1,20 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import Center from '../../components/Center.svelte';
-	import QuestionAndImage from '../../components/QuestionAndImage.svelte';
-	import ShadowText from '../../components/ShadowText.svelte';
-	import WavyBackground from '../../components/WavyBackground.svelte';
+	import Center from '../../../components/Center.svelte';
+	import QuestionAndImage from '../../../components/QuestionAndImage.svelte';
+	import ShadowText from '../../../components/ShadowText.svelte';
+	import WavyBackground from '../../../components/WavyBackground.svelte';
 	export let data;
 	const { qna, previous, next } = data;
 
 	if (browser) {
 		document.addEventListener('keydown', (e) => {
 			if (e.key === 'ArrowRight') {
-				// window.location.pathname = `/svelte-slideshow/trivia/${next}`;
-				window.location.pathname = `/trivia/${next}`;
+				// window.location.pathname = `/svelte-slideshow/trivia/crossword/${next}`;
+				window.location.pathname = `/trivia/crossword/${next}`;
 			} else if (e.key === 'ArrowLeft') {
-				// window.location.pathname = `/svelte-slideshow/trivia/${previous}`;
-				window.location.pathname = `/trivia/${previous}`;
+				// window.location.pathname = `/svelte-slideshow/trivia/crossword/${previous}`;
+				window.location.pathname = `/trivia/crossword/${previous}`;
 			}
 		});
 	}
@@ -24,10 +24,10 @@
 	};
 </script>
 
-{#if qna.type === 'QUESTION'}
-	<QuestionAndImage {...qna} />
-{:else if qna.type === 'START'}
-	<WavyBackground>
+<WavyBackground>
+	{#if qna.type === 'QUESTION'}
+		<QuestionAndImage {...qna} />
+	{:else if qna.type === 'START'}
 		<Center class="flex flex-col gap-10">
 			<ShadowText class="text-5xl px-10 question-shadow scale-150">{qna.text}</ShadowText>
 			<br />
@@ -39,11 +39,9 @@
 				>{qna.exampleAnswer}</ShadowText
 			>
 		</Center>
-	</WavyBackground>
-{:else if qna.type === 'END'}
-	<WavyBackground>
+	{:else if qna.type === 'END'}
 		<Center class="flex flex-col gap-10">
 			<ShadowText class="text-5xl px-10 answer-shadow scale-150">Happy Friday!</ShadowText>
 		</Center>
-	</WavyBackground>
-{/if}
+	{/if}
+</WavyBackground>
