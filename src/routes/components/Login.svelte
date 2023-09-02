@@ -12,8 +12,8 @@
 					['content-type']: 'application/json'
 				},
 				body: JSON.stringify({
-					username: 'zzz@zzz.com',
-					password: 'abc123ABC',
+					username: 'bbb@bbb.com',
+					password: 'bbbbbb',
 					loc: 'ui'
 				}),
 				credentials: 'include'
