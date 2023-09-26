@@ -49,7 +49,7 @@
 				{(show ? qna.answer : qna.question) || ''}
 			</div>
 			{#if (show || !qna.question) && qna.imgurl}
-				<img src={qna.imgurl} alt="jopardy" class="h-auto max-h-[30vh] max-w-[40vw] w-auto" />
+				<img src={qna.imgurl} alt="jeopardy" class="h-auto max-h-[30vh] max-w-[40vw] w-auto" />
 			{/if}
 		</Center>
 		{#if number && max && number <= max}
