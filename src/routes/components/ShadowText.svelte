@@ -3,7 +3,7 @@
 </script>
 
 <button
-	class={`text-5xl px-10 question-shadow text-white ${$$props.class}`}
+	class={`text-5xl px-10 question-shadow text-white ${$$props.class} max-w-5xl`}
 	bind:this={textElement}
 	on:click
 >

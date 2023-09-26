@@ -9,6 +9,9 @@
 	<a class="p-3 border border-white block w-min" href="/svelte-slideshow/trivia/slogan/0"
 		>Slogan Trivia</a
 	>
+	<a class="p-3 border border-white block w-min" href="/svelte-slideshow/trivia/jeopardy/0"
+		>Jeopardy Trivia</a
+	>
 	<Login />
 </div>
 
