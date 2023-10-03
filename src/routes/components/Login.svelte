@@ -15,7 +15,7 @@
 			fetch('https://nginx-anything-storage-glovbogi2a-uc.a.run.app/auth/login', {
 				method: 'POST',
 				headers: {
-					accept: '*/*',
+					accept: 'application/json',
 					['content-type']: 'application/x-www-form-urlencoded; charset=UTF-8'
 				},
 				body: f,
