@@ -1,4 +1,8 @@
 <script>
+	import { enhance } from '$app/forms';
+	const login = () => {
+		return async () => {};
+	};
 </script>
 
 <div class="flex flex-col min-w-max gap-2 p-2 text-white">
@@ -12,7 +16,7 @@
 					['content-type']: 'application/json'
 				},
 				body: JSON.stringify({
-					username: 'bbb@bbb.com',
+					email: 'bbb@bbb.com',
 					password: 'bbbbbb',
 					loc: 'ui'
 				}),
@@ -37,14 +41,14 @@
 	<button
 		class="bg-red-400 w-full p-5"
 		on:click={() => {
-			fetch('https://login.blah.wiki/auth/login', {
+			fetch('https://test.blah.wiki/auth/login', {
 				method: 'POST',
 				headers: {
 					accept: 'application/json',
 					['content-type']: 'application/json'
 				},
 				body: JSON.stringify({
-					username: 'bbb@bbb.com',
+					email: 'bbb@bbb.com',
 					password: 'bbbbbb',
 					loc: 'ui'
 				}),
@@ -52,4 +56,10 @@
 			});
 		}}>Login from wiki</button
 	>
+
+	<form method="POST" action="https://test.blah.wiki/auth/login" use:enhance={login}>
+		<input type="text" id="email" name="email" hidden value="bbb@bbb.com" />
+		<input type="text" id="password" name="password" hidden value="bbbbbb" />
+		<button type="submit">Sign In FORM</button>
+	</form>
 </div>
