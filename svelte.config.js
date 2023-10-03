@@ -16,10 +16,10 @@ export default {
 		alias: {
 			// this will match a file
 			'$components/*': 'src/components'
-		},
-		paths: {
-			base: '/svelte-slideshow'
 		}
+		// paths: {
+		// 	base: '/svelte-slideshow'
+		// }
 	},
 	preprocess: vitePreprocess()
 };

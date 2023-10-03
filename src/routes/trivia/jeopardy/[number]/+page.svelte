@@ -14,9 +14,11 @@
 	if (browser) {
 		document.addEventListener('keydown', (e) => {
 			if (e.key === 'ArrowRight') {
-				window.location.pathname = `/svelte-slideshow/trivia/jeopardy/${next}`;
+				// window.location.pathname = `/svelte-slideshow/trivia/jeopardy/${next}`;
+				window.location.pathname = `/trivia/jeopardy/${next}`;
 			} else if (e.key === 'ArrowLeft') {
-				window.location.pathname = `/svelte-slideshow/trivia/jeopardy/${previous}`;
+				// window.location.pathname = `/svelte-slideshow/trivia/jeopardy/${previous}`;
+				window.location.pathname = `/trivia/jeopardy/${previous}`;
 			} else if (e.key === ' ') {
 				unblur();
 			}

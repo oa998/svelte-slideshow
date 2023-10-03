@@ -3,13 +3,16 @@
 </script>
 
 <div class="w-full h-full bg text-white p-4">
-	<a class="p-3 border border-white block w-min" href="/svelte-slideshow/trivia/crossword/0"
+	<a class="p-3 border border-white block w-min" href="/trivia/crossword/0"
+	<!-- <a class="p-3 border border-white block w-min" href="/svelte-slideshow/trivia/crossword/0" -->
 		>Crossword Trivia</a
 	>
-	<a class="p-3 border border-white block w-min" href="/svelte-slideshow/trivia/slogan/0"
+	<a class="p-3 border border-white block w-min" href="/trivia/slogan/0"
+	<!-- <a class="p-3 border border-white block w-min" href="/svelte-slideshow/trivia/slogan/0" -->
 		>Slogan Trivia</a
 	>
-	<a class="p-3 border border-white block w-min" href="/svelte-slideshow/trivia/jeopardy/0"
+	<a class="p-3 border border-white block w-min" href="/trivia/jeopardy/0"
+	<!-- <a class="p-3 border border-white block w-min" href="/svelte-slideshow/trivia/jeopardy/0" -->
 		>Jeopardy Trivia</a
 	>
 	<Login />

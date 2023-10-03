@@ -17,9 +17,11 @@
 	if (browser) {
 		document.addEventListener('keydown', (e) => {
 			if (e.key === 'ArrowRight') {
-				window.location.pathname = `/svelte-slideshow/trivia/slogan/${next}`;
+				// window.location.pathname = `/svelte-slideshow/trivia/slogan/${next}`;
+				window.location.pathname = `/trivia/slogan/${next}`;
 			} else if (e.key === 'ArrowLeft') {
-				window.location.pathname = `/svelte-slideshow/trivia/slogan/${previous}`;
+				// window.location.pathname = `/svelte-slideshow/trivia/slogan/${previous}`;
+				window.location.pathname = `/trivia/slogan/${previous}`;
 			} else if (e.key === ' ') {
 				unblur();
 			}
