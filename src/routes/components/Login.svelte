@@ -9,20 +9,19 @@
 	<button
 		class="bg-red-400 w-full p-5"
 		on:click={() => {
+			const f = new FormData();
+			f.set('email', 'bbb@bbb.com');
+			f.set('password', 'bbbbbb');
 			fetch('https://nginx-anything-storage-glovbogi2a-uc.a.run.app/auth/login', {
 				method: 'POST',
 				headers: {
-					accept: 'application/json',
-					['content-type']: 'application/json'
+					accept: '*/*',
+					['content-type']: 'application/x-www-form-urlencoded; charset=UTF-8'
 				},
-				body: JSON.stringify({
-					email: 'bbb@bbb.com',
-					password: 'bbbbbb',
-					loc: 'ui'
-				}),
+				body: f,
 				credentials: 'include'
 			});
-		}}>LOG IN</button
+		}}>LOG IN (form-data-nginx)</button
 	>
 	<button
 		class="w-full bg-blue-400 p-5"
