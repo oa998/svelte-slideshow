@@ -60,6 +60,16 @@
 	<form method="POST" action="https://login.blah.wiki/auth/login" use:enhance={login}>
 		<input type="text" id="email" name="email" hidden value="bbb@bbb.com" />
 		<input type="text" id="password" name="password" hidden value="bbbbbb" />
-		<button type="submit">Sign In FORM</button>
+		<button type="submit">Sign In FORM LOGIN.BLAH.WIKI</button>
+	</form>
+
+	<form
+		method="POST"
+		action="https://nginx-anything-storage-glovbogi2a-uc.a.run.app/auth/login"
+		use:enhance={login}
+	>
+		<input type="text" id="email" name="email" hidden value="bbb@bbb.com" />
+		<input type="text" id="password" name="password" hidden value="bbbbbb" />
+		<button type="submit">Sign In FORM NGINX</button>
 	</form>
 </div>
