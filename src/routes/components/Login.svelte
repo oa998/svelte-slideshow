@@ -44,13 +44,12 @@
 			fetch('https://login.blah.wiki/auth/login', {
 				method: 'POST',
 				headers: {
-					accept: 'application/json',
+					accept: '*/*',
 					['content-type']: 'application/json'
 				},
 				body: JSON.stringify({
 					email: 'bbb@bbb.com',
-					password: 'bbbbbb',
-					loc: 'ui'
+					password: 'bbbbbb'
 				}),
 				credentials: 'include'
 			});
