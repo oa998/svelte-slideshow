@@ -33,4 +33,23 @@
 				.then(() => console.log('called /'));
 		}}>Get It</button
 	>
+
+	<button
+		class="bg-red-400 w-full p-5"
+		on:click={() => {
+			fetch('https://login.blah.wiki/auth/login', {
+				method: 'POST',
+				headers: {
+					accept: 'application/json',
+					['content-type']: 'application/json'
+				},
+				body: JSON.stringify({
+					username: 'bbb@bbb.com',
+					password: 'bbbbbb',
+					loc: 'ui'
+				}),
+				credentials: 'include'
+			});
+		}}>Login from wiki</button
+	>
 </div>
