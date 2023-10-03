@@ -41,16 +41,16 @@
 	<button
 		class="bg-red-400 w-full p-5"
 		on:click={() => {
+			const f = new FormData();
+			f.set('email', 'bbb@bbb.com');
+			f.set('password', 'bbbbbb');
 			fetch('https://login.blah.wiki/auth/login', {
 				method: 'POST',
 				headers: {
 					accept: '*/*',
-					['content-type']: 'application/json'
+					['content-type']: 'application/x-www-form-urlencoded; charset=UTF-8'
 				},
-				body: JSON.stringify({
-					email: 'bbb@bbb.com',
-					password: 'bbbbbb'
-				}),
+				body: f,
 				credentials: 'include'
 			});
 		}}>Login from wiki</button
