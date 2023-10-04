@@ -10,15 +10,18 @@
 		class="bg-red-400 w-full p-5"
 		on:click={() => {
 			const f = new FormData();
-			f.set('email', 'bbb@bbb.com');
-			f.set('password', 'bbbbbb');
+			const email = 'bbb@bbb.com';
+			const password = 'bbbbbb';
 			fetch('https://nginx-anything-storage-glovbogi2a-uc.a.run.app/auth/login', {
 				method: 'POST',
 				headers: {
 					accept: 'application/json',
 					['content-type']: 'application/x-www-form-urlencoded; charset=UTF-8'
 				},
-				body: f,
+				body: JSON.stringify({
+					email,
+					password
+				}),
 				credentials: 'include'
 			});
 		}}>LOG IN (form-data-nginx)</button
