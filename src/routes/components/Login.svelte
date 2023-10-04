@@ -9,14 +9,13 @@
 	<button
 		class="bg-red-400 w-full p-5"
 		on:click={() => {
-			const f = new FormData();
 			const email = 'bbb@bbb.com';
 			const password = 'bbbbbb';
 			fetch('https://nginx-anything-storage-glovbogi2a-uc.a.run.app/auth/login', {
 				method: 'POST',
 				headers: {
 					accept: 'application/json',
-					['content-type']: 'application/x-www-form-urlencoded; charset=UTF-8'
+					['content-type']: 'application/json'
 				},
 				body: JSON.stringify({
 					email,
